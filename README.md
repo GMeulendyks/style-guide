@@ -100,10 +100,10 @@ In addition:
 
 # Files
 
-1. Strive to keep files under 500 lines.
-1. File names shall match the type defined in the file.
 1. Files shall define a single type.
     1. Nested types are acceptable.
+1. File names shall match the type defined in the file.
+1. Strive to keep files under 500 lines.
 
 <br/>
 <br/>
@@ -270,7 +270,6 @@ Highlights:
 - Tested on 10 subjects with 1 to 5+ years experience.
 - Utilized eye-tracking technology to monitor how subjects interacted with the code.
 - Indentation, syntax highlighting, logical naming, and function comments has a noticable improvement on code readability and understanding.
-- This is code formatting, not code styling.
 
 Reference:
 - Kanoutas, T., Karanikiotis, T., & Symeonidis, A. L. (2024). Enhancing code readability through automated consistent formatting. Electronics, 13(11), 2073. https://doi.org/10.3390/electronics13112073
@@ -284,7 +283,7 @@ Study:
 Highlights:
 - Mathematically links code style to readability to determine if there's a correlation.
 - Frankly, this lacks a human element and practicality.
-- However, mathematically the following is notable:
+- However, mathematically speaking, the following is notable:
     - There is a correlation between code style (aka beauty) and readability.
     - Code style (aka beauty) contributes to intellectual and emotional satisfaction.
     - Cognitive load is related to the density of operators and operands, logic complexity, lines of code, statement length, number of statements, etc.
