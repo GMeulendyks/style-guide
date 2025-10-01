@@ -136,7 +136,7 @@ I will share my experience with code styling and make hypotheses. However, these
 
 Most engineers have a preference when it comes to indentation style. Objectively, no style is better than another. However, engineers often feel their preference is the best because that's what they're comfortable with.
 
-With that in mind, imagine a codebase that lacks a style guide entirely. This allows engineers to write their code in their style. When said engineers must understand different parts of the codebase, they're likely to experience discomfort for a few reasons:
+With that in mind, imagine a codebase that lacks a style guide entirely. This allows engineers to write their code in their style. When said engineers have to understand different parts of the codebase, they're likely to experience discomfort for a few reasons:
 1. The code is not in their style
 1. The code has no clear starting point
 1. The code does not document major components
@@ -151,8 +151,8 @@ In summary, my hypothesis is that a consistent style guide reduces an engineer's
 
 ## Improved Outlook
 
-Identical to the above situation, imagine a codebase that lacks a style guide entirely and allows engineers to write their code in their style. This creates unconscious mental barriers. For example, an engineer who writes code in their style considers that "their code". Similarly, any portion of the codebase that's not in their style is considered "not their code". This is a bad mindset. Engineers should consider the entirety of the codebase "our code" and always strive to do the best "we" can do. I'm of the opinion that a codebase following a consistent style guide promotes the "our code" mindset. Any team that can make the following statement likely has a greater sense of community than teams that cannot:
-- "We as a team have collectively decided how our code should be styled and we are all going to make an effort to maintain that style."
+Identical to the above situation, imagine a codebase that lacks a style guide entirely and allows engineers to write their code in their style. This creates a mental barrier of code ownership. For example, an engineer who writes code in their style considers that "their code". Similarly, any portion of the codebase that's not in their style is considered "not their code". This is a bad mindset. Engineers should consider the entirety of the codebase "our code" and always strive to write the best code "we" can. I'm of the opinion that a codebase following a consistent style guide promotes the "our code" mindset. Any team that can make the following statement likely has a greater sense of community than teams that cannot:
+- "We as a team have collectively decided how our code will be styled and we are all going to make an effort to maintain that style."
 
 In summary, my hypothesis is that a consistent style guide creates a greater sense of community on teams and encourages contributors to view the codebase as a shared effort.
 
@@ -160,9 +160,9 @@ In summary, my hypothesis is that a consistent style guide creates a greater sen
 
 ## Improved Morale
 
-When code is inconsistently formatted, it's ugly. Ugly code can make it "feel" like bad code. Bad code breeds more bad code. In other words, when engineers need to modify ugly code, their morale is reduced and they're more likely to write ugly code themselves. Stop me if you've heard this before: "Ugh, this code is so bad. We should really clean this up, but I don't have time. Let me just make the needed change and get out of here.". That morale reduction spreads throughout the codebase from not just style, but to optimization as well. I am of the opinion that having a consistent style guide can improve attitude toward the code and inspire engineers to write better code.
+When code is inconsistently formatted, it's ugly. Ugly code can make it "feel" like bad code. Bad code breeds more bad code. In other words, when engineers need to modify ugly code, their morale is reduced and they're more likely to write ugly code themselves. Stop me if you've heard this before: "Ugh, this code is so bad. We should really clean this up, but we don't have time. Let me just make the needed change and get out of here.". That morale reduction spreads throughout the codebase from not just style, but to optimization as well. I am of the opinion that having a consistent style guide can improve attitude toward the code and inspire engineers to write better code.
 
-On the topic of beautiful code, the human brain comes equipped with pattern matching. Consistently styled code provides the brain with familiar patterns and unconsciously creates a better feeling toward the code. Imagine a codebase that consistently uses the Allman bracing style. If the brain can always expect an opening curly brace on the line after a function signature, it creates a rhythmic satisfaction as we progress through multiple functions.
+On the topic of beautiful code, the human brain comes equipped with pattern matching. Consistently styled code provides the brain with familiar patterns and unconsciously creates a better feeling toward the code. Imagine a codebase that consistently uses the Allman bracing style. If the brain can always expect an opening curly brace on the line after a function signature, it creates a rhythmic satisfaction as it progresses through multiple functions.
 
 All the above points are best shown through the following example. If we had to modify code in the following blocks, consider the following questions:
 1. Which block inspires us to write better code?
