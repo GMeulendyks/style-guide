@@ -2,6 +2,7 @@
 
 [License](#license)<br/>
 [Introduction](#introduction)<br/>
+[Using This Style Guide](#using-this-style-guide)<br/>
 [General Formatting](#general-formatting)<br/>
 [Whitespace](#whitespace)<br/>
 [Includes](#includes)<br/>
@@ -28,9 +29,26 @@ MIT License.
 This is my personal style guide.
 
 It contains:
-- The specifics of how my C++ code will be formatted.
-- A `.clang-format` file to automatically format C++ code.
-- A rant about why code styling is important.
+1. The specifics of how my C/C++ code will be formatted and linted.
+1. A `.clang-format` file to automatically format C/C++ code to abide by this style guide.
+1. A `.clang-tidy` file to lint C/C++ code to abide by this style guide.
+1. A rant about why code styling is important.
+
+<br/>
+<br/>
+<br/>
+
+# Using This Style Guide
+
+To use this style guide:
+1. Clone the repository into a directory of your choice.
+1. In the root folder of a C project, create symbolic links to `.clang-format` and `clang-tidy-c` (the symbolic link should be named `.clang-tidy`).
+1. In the root folder of a C++ project, create symbolic links to `.clang-format` and `clang-tidy-cpp` (the symbolic link should be named `.clang-tidy`).
+1. Add the symbolic links to `.gitignore`.
+1. Update the IDE of choice to use clang for formatting and linting.
+
+At that point, the project should have everything required to automatically format and lint code to abide by this style guide.
+To update to the latest style guide, pull the latest of this repository.
 
 <br/>
 <br/>
@@ -42,10 +60,11 @@ It contains:
 1. A tab is equal to 4 spaces.
 1. The maximum length of a line shall be 80 characters.
 1. Every variable must be declared on its own line.
-1. Use snake case to name everything.
-1. Use the Allman bracing style.
-    1. A single statement control structure must still use Allman braces.
-    1. A single statement function must still use Allman braces.
+1. By default, use `snake_case` for naming.
+    1. Exception: Macros should be `UPPER_SNAKE_CASE`.
+1. Use the Attach bracing style.
+    1. A single statement control structure must still use Attach braces.
+    1. A single statement function must still use Attach braces.
 
 <br/>
 <br/>
@@ -53,18 +72,21 @@ It contains:
 
 # Whitespace
 
-1. Statement keywords must be followed by a single space.
-1. Comma operators must be followed by a single space.
-1. Binary and ternary operators have a single space on both sides of the operator.
-1. Pointer or reference operators shall have no space between it and the type, and a single space between it and the variable name.
+Do Nots:
 1. Do not put whitespace at the end of a line.
 1. Do not put whitespace between function names and the opening parenthesis.
 1. Do not put whitespace between unary operators and their argument.
 1. Do not use whitespace with member access operators.
 1. Do not put whitespace between template or cast types and the angle brackets.
-1. Insert a single blank line between functions.
 1. Do not start or end functions with a blank line.
-1. Indent access specifiers by 2 spaces.
+
+Always:
+1. Always put a single space after statement keywords.
+1. Always put a single space after comma operators.
+1. Always put a single space on both sides of binary and ternary operators.
+1. Always put a single space between pointer or reference operators and the variable name and no space between operators and the type.
+1. Always put a single blank line between functions.
+1. Always indent access specifiers by 2 spaces.
 
 <br/>
 <br/>
@@ -77,8 +99,8 @@ Includes shall be organized as follows:
 1. The second group of includes shall be any includes that use angle brackets followed by a space.
 1. The third group of includes shall be any other includes followed by a space.
 
-In addition:
-1. If a file uses a header directly, include it directly.
+Other include rules are:
+1. If a file uses a header directly, it will include it directly.
 
 <br/>
 <br/>
@@ -86,13 +108,29 @@ In addition:
 
 # Language Features
 
+Do Nots:
+1. Do not nest ternary operators.
+1. Do not delete null pointers as it results in a noop.
+1. Do not include an else branch when the if statement returns from a function.
+1. Do not use magic numbers in code.
+    1. Exception: `0` is an acceptable magic number as it indicates no value. Even so, using `0` must be evaluated on a case by case basis. 
+1. Do not use the inline keyword.
+
+Always:
+1. Always use traditional binary, unary, and overloaded operators.
+1. Always match a function's parameter names in declaration and definition.
+1. Always use auto where it reduces typing and improves readability.
+    1. Include explicit pointer and reference operators with auto.
+1. Always use uppercase letters when declaring literals.
+1. Always use include guards instead of `#pragma once`.
+
+Preferences:
 1. Prefer double over floats.
 1. Prefer nullptr over NULL or 0.
 1. Prefer alias declarations over typedefs.
-1. Prefer `#pragma once` over include guards.
 1. Prefer west const over east const.
-1. Use auto where it reduces typing and improves readability.
-    1. Include explicit pointer and reference operators with auto.
+1. Prefer `#ifdef` and `#ifndef` to `#if defined` and `#if !defined` respectively.
+1. Prefer `std::flush` and newline characters to `std::endl`.
 
 <br/>
 <br/>
@@ -103,7 +141,7 @@ In addition:
 1. Files shall define a single type.
     1. Nested types are acceptable.
 1. File names shall match the type defined in the file.
-1. Strive to keep files under 500 lines.
+1. Strive to keep files as small and simple as possible (preferrably [0, 500] lines).
 
 <br/>
 <br/>

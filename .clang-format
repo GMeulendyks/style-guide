@@ -29,7 +29,7 @@ BinPackParameters: false
 BitFieldColonSpacing: None
 BreakAfterAttributes: Always
 BreakBeforeBinaryOperators: None
-BreakBeforeBraces: Allman
+BreakBeforeBraces: Attach
 BreakBeforeInheritanceComma: false
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializers: AfterColon
