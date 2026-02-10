@@ -14,7 +14,6 @@ Checks: >
   cppcoreguidelines-*,
   -cppcoreguidelines-avoid-do-while,
   -cppcoreguidelines-init-variables,
-  -cppcoreguidelines-no-malloc,
   -cppcoreguidelines-pro-type-union-access,
   -cppcoreguidelines-pro-type-vararg,
   -darwin-*,
