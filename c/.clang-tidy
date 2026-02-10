@@ -21,6 +21,7 @@ Checks: >
   -google-objc-global-variable-declaration,
   -google-readability-avoid-underscore-in-googletest-name,
   hicpp-*,
+  -hicpp-ignored-remove-result,
   linuxkernel-*,
   -llvm-*,
   llvm-namespace-comment,
