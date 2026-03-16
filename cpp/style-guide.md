@@ -63,6 +63,7 @@ Other include rules are:
 
 Do Nots:
 1. Do not nest ternary operators.
+1. Do not use goto statements.
 1. Do not delete null pointers as it results in a noop.
 1. Do not include an else branch when the if statement returns from a function.
 1. Do not use magic numbers in code.
@@ -70,7 +71,7 @@ Do Nots:
 1. Do not use the inline keyword.
 
 Always:
-1. Always use traditional binary, unary, and overloaded operators.
+1. Always use primary operators over [alternative operators](https://en.cppreference.com/w/cpp/language/operator_alternative.html).
 1. Always match a function's parameter names in declaration and definition.
 1. Always use auto where it reduces typing and improves readability.
     1. Include explicit pointer, reference, and forward reference operators with auto.

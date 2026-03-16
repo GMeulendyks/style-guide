@@ -22,12 +22,12 @@ See [LICENSE](./LICENSE)
 
 This is my personal style guide.
 
-The [c](./c) and [cpp](./cpp) folders will contain the following:
-1. A `style-guide.md` file which documents guidelines that must be adhered to.
-1. A `.clang-format` file to automatically format code to abide by the guidelines.
-1. A `.clang-tidy` file to lint code to abide by the guidelines.
+Each C/C++ standard will have an assocaited folder. Each folder will contain the following:
+1. A `style-guide.md` file which documents how code will be formatted and linted according to the standard.
+1. A `.clang-format` file to automatically format code to abide by the style guide.
+1. A `.clang-tidy` file to automatically lint code to abide by the style guide.
 
-Below documents how to use this style guide and a rant about why styling is important.
+Below documents how to use this style guide and a rant about why code styling is important.
 
 <br/>
 <br/>
@@ -37,12 +37,12 @@ Below documents how to use this style guide and a rant about why styling is impo
 
 To use this style guide:
 1. Clone the repository into a directory of your choice.
-1. In the root folder of a C project, create symbolic links to `c/.clang-format` and `c/.clang-tidy`.
-1. In the root folder of a C++ project, create symbolic links to `cpp/.clang-format` and `cpp/.clang-tidy`.
+1. Determine the C/C++ standard of the project.
+1. In the root folder of your project, create symbolic links to the corresponding `.clang-format` and `.clang-tidy` files.
 1. Add the symbolic links to `.gitignore`.
 1. Update the IDE of choice to use clang for formatting and linting.
 
-At that point, the project should have everything required to automatically format and lint code to abide by this style guide.
+At that point, the project will have everything required to automatically format and lint code to abide by the corresponding style guide.
 To update to the latest style guide, pull the latest of this repository.
 
 <br/>

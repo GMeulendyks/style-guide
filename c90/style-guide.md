@@ -18,9 +18,9 @@
 1. Every variable must be declared on its own line.
 1. By default, use `snake_case` for naming.
     1. Exception: Macros should be `UPPER_SNAKE_CASE`.
-1. Use the Attach bracing style.
-    1. A single statement control structure must still use Attach braces.
-    1. A single statement function must still use Attach braces.
+1. Use the [K&R](https://en.wikipedia.org/wiki/Indentation_style#K&R) bracing style.
+    1. A single statement control structure must still use K&R braces.
+    1. A single statement function must still use K&R braces.
 
 <br/>
 <br/>
@@ -63,19 +63,16 @@ Other include rules are:
 
 Do Nots:
 1. Do not nest ternary operators.
+1. Do not use goto statements.
 1. Do not delete null pointers as it results in a noop.
 1. Do not include an else branch when the if statement returns from a function.
 1. Do not use magic numbers in code.
-    1. Exception: `0` is an acceptable magic number as it indicates no value. Even so, using `0` must be evaluated on a case by case basis. 
-1. Do not use the inline keyword.
+    1. Exception: `0` is an acceptable magic number as it indicates no value. Even so, using `0` must be evaluated on a case by case basis.
+1. Always include trailing commas in enums, arrays, and general lists.
 
 Always:
-1. Always use traditional binary, unary, and overloaded operators.
 1. Always match a function's parameter names in declaration and definition.
-1. Always use uppercase letters when declaring literals.
-
-Preferences:
-1. Prefer `#ifdef` and `#ifndef` to `#if defined` and `#if !defined` respectively.
+1. Always use `#ifdef` and `#ifndef` rather than `#if defined` and `#if !defined` respectively.
 
 <br/>
 <br/>
@@ -83,7 +80,7 @@ Preferences:
 # Files
 
 1. Files shall define a single type.
-    1. Nested types are acceptable.
+    1. Nested types are acceptable, but should be evaluated on a case by case basis.
 1. File names shall match the type defined in the file.
 1. Strive to keep files as small and simple as possible (preferrably [0, 500] lines).
 
